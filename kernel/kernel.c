@@ -12,7 +12,7 @@ uint8_t kernel_main() {
     initialise_kernel_struct();
     clear_screen();
     // create_process(bonsoir);
-    // create_process(naprive);
+    create_process(naprive);
     // create_process(aurevoir);
     kprint("EKRI KOMAND OU AN\n"
         "EKRI FINI POU FEMEN OS LA\n> ");

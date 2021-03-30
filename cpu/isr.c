@@ -5,7 +5,7 @@
 #include "../libc/string.h"
 #include "timer.h"
 #include "ports.h"
-
+#include "../kernel/task/system_call.h"
 isr_t interrupt_handlers[256];
 
 void isr_install() {
@@ -71,6 +71,7 @@ void isr_install() {
     set_idt_gate(45, (uint32_t)irq13);
     set_idt_gate(46, (uint32_t)irq14);
     set_idt_gate(47, (uint32_t)irq15);
+    set_idt_gate(48, (uint32_t)irq16);
 
     set_idt(); // Load with ASM
 }
@@ -149,8 +150,11 @@ void irq_handler(registers_t *r) {
 void irq_install() {
     /* Enable interruptions */
     asm volatile("sti");
-    /* IRQ0: timer */
-    init_timer(1);
     /* IRQ1: keyboard */
     init_keyboard();
+
+    // register system call
+    register_interrupt_handler(IRQ16,system_call_handler);
+    /* IRQ0: timer */
+    init_timer(1);
 }

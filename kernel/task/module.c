@@ -1,10 +1,9 @@
 
 #include "module.h"
 void bonjour(){
-    while(1){
+        kprint("d");
+        end_program();
 
-
-    }
 }
 
 void bonsoir(){

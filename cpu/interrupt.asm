@@ -112,6 +112,7 @@ global irq12
 global irq13
 global irq14
 global irq15
+global irq16
 
 ; 0: Divide By Zero Exception
 isr0:
@@ -378,6 +379,12 @@ irq14:
 irq15:
 	push byte 15
 	push byte 47
+	jmp irq_common_stub
+
+;interupt software
+irq16:
+	push byte 16
+	push byte 48
 	jmp irq_common_stub
 
 read_eip:

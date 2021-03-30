@@ -5,7 +5,6 @@ extern process_t * __kernel_entry_process__;
 extern int __kernel_process_id__;
 extern uint32_t * current_directory;
 
-extern 
 process_t * get_next_process(){
     return __current_process__->next;
 }
@@ -33,6 +32,25 @@ void create_process(void * func){
 
 }
 
+void remove_process(int id){
+    int is=0;
+    if(__current_process__->id==id)
+        is=1;
+
+    process_t * temp=__kernel_entry_process__;
+    process_t * previous_temp;
+    while(temp->id !=id){
+        previous_temp=temp;
+        temp=temp->next;
+    }
+    previous_temp->next=temp->next;
+
+    //if process deleted was the current process
+    if(is){
+        switch_process();
+    }
+
+}
 
 void context_save(registers_t *registers){
     __current_process__->eip=registers->eip;

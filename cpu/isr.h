@@ -53,6 +53,7 @@ extern void irq12();
 extern void irq13();
 extern void irq14();
 extern void irq15();
+extern void irq16();
 
 #define IRQ0 32
 #define IRQ1 33
@@ -70,6 +71,7 @@ extern void irq15();
 #define IRQ13 45
 #define IRQ14 46
 #define IRQ15 47
+#define IRQ16 48
 
 /* Struct which aggregates many registers.
  * It matches exactly the pushes on interrupt.asm. From the bottom:
