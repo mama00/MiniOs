@@ -13,3 +13,14 @@ Algorithm used came from book : https://www.amazon.com/Operating-System-Concepts
 
 Full Documentation wrote by me will come later
 
+## implemented
+1) Memory management
+2)process
+3)scree driver
+4)keyboard driver
+5)timer driver
+
+## pending
+user mode
+monitoring
+
