@@ -1,6 +1,9 @@
 # Mini OS Kernel
 
 ## Documentation and example used for this kernel can be found here
+
+This kernel extend the base kernel code of https://github.com/cfenollosa/os-tutorial and add New features like memory management ,process creation ,system call ect ......
+
 Inspired by [this document](http://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
 
 https://web.archive.org/web/20160326064709/http://jamesmolloy.co.uk/tutorial_html/4.-The%20GDT%20and%20IDT.html
