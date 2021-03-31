@@ -36,7 +36,7 @@ void initialise_kernel_struct(){
    __tick__=0;
 
 
-   //stuff for process simulation 
+   //creation of the first process
     uint32_t esp, ebp;
     asm volatile("mov %%esp, %0" : "=r"(esp));
     asm volatile("mov %%ebp, %0" : "=r"(ebp));

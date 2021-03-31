@@ -44,9 +44,11 @@ void remove_process(int id){
         temp=temp->next;
     }
     previous_temp->next=temp->next;
+    __kernel_entry_process__=temp;
 
     //if process deleted was the current process
     if(is){
+        __current_process__=previous_temp;
         switch_process();
     }
 

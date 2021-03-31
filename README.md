@@ -19,7 +19,7 @@ Full Documentation wrote by me will come later
 3)scree driver
 4)keyboard driver
 5)timer driver
-
+6)System call
 ## pending
 user mode
 monitoring
