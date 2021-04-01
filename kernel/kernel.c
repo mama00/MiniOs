@@ -13,7 +13,7 @@ uint8_t kernel_main() {
     clear_screen();
     // create_process(bonsoir);
     create_process(naprive);
-    // create_process(aurevoir);
+    create_process(aurevoir);
     kprint("EKRI KOMAND OU AN\n"
         "EKRI FINI POU FEMEN OS LA\n> ");
     isr_install();

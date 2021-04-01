@@ -1,8 +1,11 @@
 
 #include "module.h"
 void bonjour(){
+
         kprint("d");
+        kprint("\n");
         end_program();
+
 
 }
 
@@ -23,8 +26,6 @@ void aurevoir(){
 }
 
 void naprive(){
-    while(1){
         kprint("nap rive");
         kprint("\n");
-    }
 }

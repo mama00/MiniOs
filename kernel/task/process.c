@@ -26,13 +26,10 @@ void create_process(void * func){
     kprint(d);
     kprint("\n");
 
-
-
-
-
 }
 
 void remove_process(int id){
+
     int is=0;
     if(__current_process__->id==id)
         is=1;
@@ -44,7 +41,7 @@ void remove_process(int id){
         temp=temp->next;
     }
     previous_temp->next=temp->next;
-    __kernel_entry_process__=temp;
+    __kernel_entry_process__=previous_temp;
 
     //if process deleted was the current process
     if(is){

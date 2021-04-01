@@ -6,7 +6,7 @@
 #include "../paging/paging.h"
 #include "../../cpu/isr.h"
 #include "scheduler.h"
-
+#include "../../libc/string.h"
 typedef struct  {
    int id;                // Process ID.
    uint32_t esp, ebp;       // Stack and base pointers.
