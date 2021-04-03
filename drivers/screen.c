@@ -10,6 +10,10 @@ int get_offset(int col, int row);
 int get_offset_row(int offset);
 int get_offset_col(int offset);
 
+void kprint_at_r(char *message,int col,int row){
+    kprint_at(message,col,row);
+    kprint_at(' ',__col__,__row__ - 1); // return to previous position
+}
 
 void kprint_at(char *message, int col, int row) {
     /* Set cursor if col/row are negative */
@@ -30,6 +34,9 @@ void kprint_at(char *message, int col, int row) {
         row = get_offset_row(offset);
         col = get_offset_col(offset);
     }
+    //saving last position of cursor;
+    __col__=col;
+    __row__=row;
 }
 
 void kprint(char *message) {

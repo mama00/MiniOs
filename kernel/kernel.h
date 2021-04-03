@@ -16,6 +16,7 @@ extern page_directory_t *current_directory;
 process_t * __kernel_entry_process__;
 process_t * __current_process__;
 
+void process_list();
 
 
 #endif

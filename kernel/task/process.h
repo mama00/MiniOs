@@ -8,6 +8,7 @@
 #include "scheduler.h"
 #include "../../libc/string.h"
 typedef struct  {
+   char * name;
    int id;                // Process ID.
    uint32_t esp, ebp;       // Stack and base pointers.
    uint32_t eip;            // Instruction pointer.
@@ -18,7 +19,7 @@ typedef struct  {
 
 void context_save(registers_t * reg);
 extern uint32_t read_eip();
-void create_process(void * func);
+void create_process(void * func,char * );
 void remove_process(int id);
 process_t * get_next_process();
 

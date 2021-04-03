@@ -1,12 +1,23 @@
 
 #include "module.h"
 void bonjour(){
+    while(1)
+    kprint("");
 
-        kprint("d");
-        kprint("\n");
-        end_program();
+}
 
+void p1(){
+    while(1){
+        kprint("");
+    }
+    end_program();
+}
 
+void p2(){
+    while(1){
+        kprint("");
+    }
+    end_program();
 }
 
 void bonsoir(){
@@ -19,13 +30,14 @@ void bonsoir(){
 }
 
 void aurevoir(){
-    while(1){
-        kprint("au revoir");
-        kprint("\n");
-    }
+    while(1)
+        kprint("");
+        // end_program();
 }
 
 void naprive(){
-        kprint("nap rive");
-        kprint("\n");
+
+        kprint("");
+        end_program();
+
 }

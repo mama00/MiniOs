@@ -9,10 +9,12 @@ process_t * get_next_process(){
     return __current_process__->next;
 }
 
-void create_process(void * func){
+void create_process(void * func,char * name){
+    asm volatile("cli");
     //atomic adding
     __sync_fetch_and_add(&__kernel_process_id__,1);
     process_t * new_process = (process_t *)kmalloc_a(sizeof(process_t *));
+    new_process->name=name;
    new_process->id = __kernel_process_id__;
    new_process->esp = 0x0;
    new_process->ebp = 0x0;
@@ -21,15 +23,18 @@ void create_process(void * func){
    new_process->next=__kernel_entry_process__->next;
    __kernel_entry_process__->next= new_process;
    char d[16]="";
-    kprint("created process id : ");
+    kprint("PWOSESIS KREYE, ID LI SE : ");
     int_to_ascii(new_process->id,d);
     kprint(d);
     kprint("\n");
-
+    asm volatile("sti");
 }
 
 void remove_process(int id){
-
+    // char d[16]="";
+    // int_to_ascii(id,d);
+    // kprint("NAP FEMEN PWOSESUS ");
+    // kprint(d);
     int is=0;
     if(__current_process__->id==id)
         is=1;

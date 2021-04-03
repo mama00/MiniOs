@@ -11,11 +11,11 @@
 uint8_t kernel_main() {
     initialise_kernel_struct();
     clear_screen();
-    // create_process(bonsoir);
-    create_process(naprive);
-    create_process(aurevoir);
+    // create_process(bonsoir,"bonsoir");
+    // create_process(naprive,"naprive");
+    // create_process(aurevoir,"aurevoir");
     kprint("EKRI KOMAND OU AN\n"
-        "EKRI FINI POU FEMEN OS LA\n> ");
+        "EKRI FINI POU FEMEN OS LA, EKRI ED POU JWENN ED\n> ");
     isr_install();
     irq_install();
     initialise_paging();
@@ -46,10 +46,34 @@ void initialise_kernel_struct(){
    __kernel_entry_process__->ebp = ebp;
    __kernel_entry_process__->eip=bonjour;
    __kernel_entry_process__->page_directory=current_directory;
+   __kernel_entry_process__->name="ROOT";
    __kernel_entry_process__->next=__kernel_entry_process__;
    __current_process__=__kernel_entry_process__;
 
 
 
+
+}
+
+void process_list(){
+    asm volatile("cli");
+    char d[16]="";
+    process_t * tmp=__kernel_entry_process__;
+    int first_id=__kernel_entry_process__->id;
+    kprint("    ID   ADRES      NOM \n");
+    do{
+        kprint("     ");
+        int_to_ascii(tmp->id,d);
+        kprint(d);
+        kprint("   ");
+        hex_to_ascii(tmp->eip,d);
+        kprint(d);
+        kprint("    ");
+        kprint(tmp->name);
+        tmp=tmp->next;
+        kprint("\n");
+    }while(first_id!=tmp->id);
+
+    asm volatile("sti");
 
 }

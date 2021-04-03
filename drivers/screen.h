@@ -15,4 +15,10 @@ void kprint_at(char *message, int col, int row);
 void kprint(char *message);
 void kprint_backspace();
 
+
+// row and col of cursor
+
+int __row__;
+int __col__;
+
 #endif

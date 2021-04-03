@@ -7,5 +7,6 @@ void bonjour();
 void bonsoir();
 void aurevoir();
 void naprive();
-
+void p1();
+void p2();
 #endif

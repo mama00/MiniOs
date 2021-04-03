@@ -3,12 +3,13 @@
 void system_call_handler(registers_t *registers){
     asm volatile("cli");
     if (registers->eax==0x1){
-        kprint("end of program");
         kprint('\n');
         remove_process(__current_process__->id);
         asm volatile("sti");
     }
  
+    kprint('\n');
+    kprint(">");
     asm volatile("popa");
 }
 
