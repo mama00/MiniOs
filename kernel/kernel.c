@@ -11,9 +11,7 @@
 uint8_t kernel_main() {
     initialise_kernel_struct();
     clear_screen();
-    // create_process(bonsoir,"bonsoir");
-    // create_process(naprive,"naprive");
-    // create_process(aurevoir,"aurevoir");
+    create_process(aurevoir,"aurevoir");
     kprint("EKRI KOMAND OU AN\n"
         "EKRI FINI POU FEMEN OS LA, EKRI ED POU JWENN ED\n> ");
     isr_install();

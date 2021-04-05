@@ -1,0 +1,31 @@
+<mxfile>
+    <diagram id="kQ1-P-y8aGH3BDCMAiRU" name="Page-1">
+        <mxGraphModel dx="878" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#114B5F" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="10" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#028090;fontColor=#E4FDE1;labelBackgroundColor=#114B5F;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Allumage" style="whiteSpace=wrap;html=1;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#028090;fontColor=#E4FDE1;labelBackgroundColor=#114B5F;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="BIOS/UEFI" style="whiteSpace=wrap;html=1;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#028090;fontColor=#E4FDE1;labelBackgroundColor=#114B5F;" edge="1" parent="1" source="4" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Bootloader" style="whiteSpace=wrap;html=1;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Kernel_main" style="whiteSpace=wrap;html=1;fillColor=#F45B69;strokeColor=#028090;fontColor=#E4FDE1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

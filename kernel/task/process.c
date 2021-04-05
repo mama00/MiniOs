@@ -15,6 +15,7 @@ void create_process(void * func,char * name){
     __sync_fetch_and_add(&__kernel_process_id__,1);
     process_t * new_process = (process_t *)kmalloc_a(sizeof(process_t *));
     new_process->name=name;
+    kprint("hi");
    new_process->id = __kernel_process_id__;
    new_process->esp = 0x0;
    new_process->ebp = 0x0;
@@ -47,7 +48,6 @@ void remove_process(int id){
     }
     previous_temp->next=temp->next;
     __kernel_entry_process__=previous_temp;
-
     //if process deleted was the current process
     if(is){
         __current_process__=previous_temp;
