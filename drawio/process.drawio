@@ -1,0 +1,57 @@
+<mxfile>
+    <diagram id="9xdF4umD5VwO6jODpLHx" name="Page-1">
+        <mxGraphModel dx="878" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#60E696;fillColor=#F694C1;fontColor=#095C86;" edge="1" parent="1" source="2" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="create_process function" style="whiteSpace=wrap;html=1;fillColor=#F694C1;strokeColor=#AF45ED;fontColor=#095C86;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#60E696;fillColor=#F694C1;fontColor=#095C86;" edge="1" parent="1" source="3" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="creation d'une objet process_t" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;strokeColor=#AF45ED;fillColor=#F694C1;fontColor=#095C86;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#60E696;fillColor=#F694C1;fontColor=#095C86;" edge="1" parent="1" source="4" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="initialisation de esp epb eip" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;strokeColor=#AF45ED;fillColor=#F694C1;fontColor=#095C86;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="440" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#60E696;fillColor=#F694C1;fontColor=#095C86;" edge="1" parent="1" source="6" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="recupere size of process&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;strokeColor=#AF45ED;fillColor=#F694C1;fontColor=#095C86;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#60E696;fillColor=#F694C1;fontColor=#095C86;" edge="1" parent="1" source="7" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="creation d'une page directory pour le process" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;strokeColor=#AF45ED;fillColor=#F694C1;fontColor=#095C86;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#60E696;fillColor=#F694C1;fontColor=#095C86;" edge="1" parent="1" source="9" target="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="680" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="copie du process dans la page directory" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;strokeColor=#AF45ED;fillColor=#F694C1;fontColor=#095C86;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#60E696;fillColor=#F694C1;fontColor=#095C86;" edge="1" parent="1" source="10" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="initialisation du page directory de l'objet process_t" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;strokeColor=#AF45ED;fillColor=#F694C1;fontColor=#095C86;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="insertion du process dans la liste chainee" style="whiteSpace=wrap;html=1;rounded=0;sketch=0;strokeColor=#AF45ED;fillColor=#F694C1;fontColor=#095C86;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="500" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
