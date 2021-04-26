@@ -13,7 +13,7 @@ typedef struct  {
    uint32_t esp, ebp;       // Stack and base pointers.
    uint32_t eip;            // Instruction pointer.
    page_directory_t *page_directory; // Page directory of the process
-   struct process_t *next;     // The next process in a linked list.
+   struct process_t * next;     // The next process in a linked list.
    
 }process_t;
 

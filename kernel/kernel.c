@@ -11,7 +11,6 @@
 uint8_t kernel_main() {
     initialise_kernel_struct();
     clear_screen();
-    create_process(aurevoir,"aurevoir");
     kprint("EKRI KOMAND OU AN\n"
         "EKRI FINI POU FEMEN OS LA, EKRI ED POU JWENN ED\n> ");
     isr_install();
@@ -26,6 +25,7 @@ uint8_t kernel_main() {
 void initialise_kernel_struct(){
     // free mem adrr must be paged alligned
    __free_mem_addr__ = 0x1000*0xFFF;
+
    __mem_end_page__ = 0xF0000000;
    __kernel_process_id__=0;
    __nframes__ = __mem_end_page__ / 0x1000;
@@ -48,6 +48,8 @@ void initialise_kernel_struct(){
    __kernel_entry_process__->next=__kernel_entry_process__;
    __current_process__=__kernel_entry_process__;
 
+  p1_count=0;
+  p2_count=0;
 
 
 

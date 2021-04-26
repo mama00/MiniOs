@@ -79,6 +79,7 @@ void page_fault(registers_t regs)
    hex_to_ascii(faulting_address,d);
    kprint(d);
        kprint("\n");
+       
    asm volatile("hlt");
 }
 
@@ -92,7 +93,7 @@ void initialise_paging()
 
 // identity map for the kernel code
    int i = 0;
-   while (i < __free_mem_addr__)
+   while (i < __free_mem_addr__* 0x1000)
    {
        // Kernel code is readable but not writeable from userspace.
        alloc_frame( get_page(i, 1, kernel_directory), 0, 0);

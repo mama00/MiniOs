@@ -10,9 +10,9 @@ extern uint32_t __tick__;
 extern process_t * __current_process__;
 
 static void timer_callback(registers_t *regs) {
-    // __tick__++;
     switch_process(); //switch to an other process
-    UNUSED(regs);
+    if(__current_process__->id==0)
+    switch_process();
 }
 
 void init_timer(uint32_t freq) {

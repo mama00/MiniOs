@@ -49,6 +49,18 @@ void dispatch(char * command_string){
         kprint("\n");
         kprint(">");
     }
+    else if (strcmp(command,"SH")==0){
+        kprint("p1 count:  ");
+        char ca[32]="";
+        int_to_ascii(p1_count,ca);
+        kprint(ca);
+        kprint("\n");
+        kprint("p2 count:  ");
+        int_to_ascii(p2_count,ca);
+        kprint(ca);
+        kprint("\n");
+
+    }
     else if(strcmp(command,"EXEC")==0){
         if(strcmp(param,"P1")==0){
             char name[32]="P1";
@@ -59,6 +71,11 @@ void dispatch(char * command_string){
             char name[32]="P2";
             create_process(p2,name);
             kprint(">");
+        }
+        else if(strcmp(param,"P3")==0){
+            char name[32]="P3";
+            create_process(p3,name);
+            kprint(">");       
         }
         else{
             kprint("Prosesis sa ap existe");
